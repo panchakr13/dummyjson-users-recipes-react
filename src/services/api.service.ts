@@ -42,8 +42,8 @@ export const loadAuthUsers = async (skip:number, limit: number): Promise<IUser[]
     return data.users;
 }
 
-export const loadAuthRecipes = async (): Promise<IRecipe[]> => {
-    const {data} = await axiosInstance.get<IRecipesResponseModelType>('/recipes');
+export const loadAuthRecipes = async (skip: number, limit: number): Promise<IRecipe[]> => {
+    const {data} = await axiosInstance.get<IRecipesResponseModelType>(`/recipes?skip=${skip}&limit=${limit}`);
     return data.recipes;
 }
 

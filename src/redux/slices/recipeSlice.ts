@@ -14,10 +14,10 @@ const initialState: RecipeSliceType = {recipes: [], recipe: null, loadState: fal
 
 const loadRecipes = createAsyncThunk(
     'recipeSlice/loadRecipes',
-    async (_, thunkAPI) => {
+    async ({skip, limit}: {skip: number; limit: number}, thunkAPI) => {
 
         try {
-            const recipes = await loadAuthRecipes()
+            const recipes = await loadAuthRecipes(skip, limit)
             // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
 
             return thunkAPI.fulfillWithValue(recipes);
