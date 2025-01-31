@@ -14,10 +14,10 @@ const initialState: UserSliceType = {users: [], user: null, loadState: false};
 
 const loadUsers = createAsyncThunk(
     'userSlice/loadUsers',
-    async (_, thunkAPI) => {
+    async ({skip, limit}: {skip: number; limit: number}, thunkAPI) => {
 
         try {
-            const users = await loadAuthUsers()
+            const users = await loadAuthUsers(skip, limit)
             // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
 
             return thunkAPI.fulfillWithValue(users);

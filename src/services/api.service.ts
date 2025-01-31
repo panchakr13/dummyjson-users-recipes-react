@@ -37,8 +37,8 @@ export const login = async ({username, password, expiresInMins}: loginData): Pro
     return userWithTokens;
 }
 // на цей запит повернеться відповідь що буде містити юзерів з токенами
-export const loadAuthUsers = async (): Promise<IUser[]> => {
-    const {data} = await axiosInstance.get<IUsersResponseModelType>(`/users`);
+export const loadAuthUsers = async (skip:number, limit: number): Promise<IUser[]> => {
+    const {data} = await axiosInstance.get<IUsersResponseModelType>(`/users?skip=${skip}&limit=${limit}`);
     return data.users;
 }
 
