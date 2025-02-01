@@ -6,6 +6,7 @@ import {UsersPage} from "../pages/UsersPage.tsx";
 import {UserDetailsPage} from "../pages/UserDetailsPage.tsx";
 import {RecipesPage} from "../pages/RecipesPage.tsx";
 import {RecipeDetailsPage} from "../pages/RecipeDetailsPage.tsx";
+import {RecipesByTagPage} from "../pages/RecipesByTagPage.tsx";
 
 const routes: RouteObject[] = [
     {
@@ -15,7 +16,8 @@ const routes: RouteObject[] = [
             {path:'users', element: <UsersPage/>},
             {path:'users/:id', element: <UserDetailsPage/>},
             {path:'recipes', element:<RecipesPage/>},
-            {path:'recipes/:id', element:<RecipeDetailsPage/>}
+            {path:'recipes/:id', element:<RecipeDetailsPage/>},
+            {path:'recipes/tag/:tag', element:<RecipesByTagPage/>}
         ]
     }
 ];
