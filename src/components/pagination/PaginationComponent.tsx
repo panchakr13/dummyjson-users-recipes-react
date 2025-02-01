@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 
-const LIMIT = 10; // Кількість користувачів на сторінку
+const LIMIT = 10;
 
 export const PaginationComponent = () => {
     const [query, setQuery] = useSearchParams({ skip: '0' });
