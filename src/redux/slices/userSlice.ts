@@ -18,10 +18,8 @@ const loadUsers = createAsyncThunk(
 
         try {
             const users = await loadAuthUsers(skip, limit)
-            // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
 
             return thunkAPI.fulfillWithValue(users);
-            // throw new Error();
         } catch (e) {
             console.log(e);
             return thunkAPI.rejectWithValue('some error');

@@ -1,14 +1,3 @@
-//
-//
-// const HomePage = () => {
-//     return (
-//         <div>
-//             {/*<Outlet/>*/}
-//         </div>
-//     );
-// };
-//
-// export default HomePage;
 
 import { useAppSelector } from '../redux/hooks/useAppSelector.tsx';
 
