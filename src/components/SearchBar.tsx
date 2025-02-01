@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {FC, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 interface SearchBarProps {
@@ -6,7 +6,7 @@ interface SearchBarProps {
     searchRoute: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ placeholder = "Search...", searchRoute }) => {
+const SearchBar:FC<SearchBarProps> = ({ placeholder = "Search...", searchRoute }) => {
     const [searchText, setSearchText] = useState("");
     const navigate = useNavigate();
 
