@@ -1,11 +1,9 @@
-import { useParams, Link } from "react-router-dom";
-import { useAppSelector } from "../redux/hooks/useAppSelector";
+import { Link } from "react-router-dom";
+import useRecipeDetailsData from "../../hooks/recipeHooks/useRecipeDetailsData.tsx";
 
 export const RecipeDetailsPage = () => {
-    const { id } = useParams<{ id: string }>();
-    const recipe = useAppSelector(({ recipeSlice }) =>
-        recipeSlice.recipes.find((r) => r.id.toString() === id)
-    );
+
+    const { recipe } = useRecipeDetailsData()
 
     if (!recipe) {
         return <div>Recipe not found</div>;

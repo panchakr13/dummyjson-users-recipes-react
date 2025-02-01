@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction } from "@reduxjs/toolkit";
-import { IRecipe } from "../../models/IRecipe.ts";
-import { loadAuthRecipes, getRecipesByUserId, searchRecipes, searchRecipesByTag } from "../../services/api.service.ts";
+import { IRecipe } from "../../models/IRecipeModel/IRecipe.ts";
+import { loadAuthRecipes, getRecipesByUserId, searchRecipes, searchRecipesByTag } from "../../services/recipe.api.service.ts";
 
 type RecipeSliceType = {
     recipes: IRecipe[];

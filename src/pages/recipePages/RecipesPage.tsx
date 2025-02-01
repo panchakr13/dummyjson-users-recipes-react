@@ -1,27 +1,11 @@
-import { useAppSelector } from "../redux/hooks/useAppSelector";
-import { useAppDispatch } from "../redux/hooks/useAppDispatch";
-import { useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { recipeSliceActions } from "../redux/slices/recipeSlice";
-import { PaginationComponent } from "../components/pagination/PaginationComponent";
-import SearchBar from "../components/SearchBar";
+import { Link } from "react-router-dom";
+import { PaginationComponent } from "../../components/pagination/PaginationComponent.tsx";
+import SearchBar from "../../components/SearchBar.tsx";
+import useRecipeData from "../../hooks/recipeHooks/useRecipeData.tsx";
 
 export const RecipesPage = () => {
-    const dispatch = useAppDispatch();
-    const { recipes, loadState } = useAppSelector(({ recipeSlice }) => recipeSlice);
 
-    const [searchParams] = useSearchParams();
-    const skip = parseInt(searchParams.get("skip") || "0", 10);
-    const limit = 10;
-    const queryParam = searchParams.get("q") || "";
-
-    useEffect(() => {
-        if (queryParam) {
-            dispatch(recipeSliceActions.searchRecipes(queryParam));
-        } else {
-            dispatch(recipeSliceActions.loadRecipes({ skip, limit }));
-        }
-    }, [dispatch, skip, limit, queryParam]);
+    const { recipes, loadState } = useRecipeData()
 
     return (
         <div>

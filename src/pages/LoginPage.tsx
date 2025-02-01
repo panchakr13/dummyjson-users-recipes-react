@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../redux/hooks/useAppDispatch.tsx';
 import { authSliceActions } from '../redux/slices/authSlice.ts';
-import { login } from '../services/api.service.ts';
+import { login } from '../services/authUser.api.service.ts';
 import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = () => {

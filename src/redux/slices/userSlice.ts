@@ -1,6 +1,6 @@
-import { IUser } from "../../models/IUser.ts";
+import { IUser } from "../../models/IUserModel/IUser.ts";
 import { createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction } from "@reduxjs/toolkit";
-import { loadAuthUsers, getUserById, searchUsers } from "../../services/api.service.ts";
+import { loadAuthUsers, getUserById, searchUsers } from "../../services/user.api.service.ts";
 
 type UserSliceType = {
     users: IUser[];

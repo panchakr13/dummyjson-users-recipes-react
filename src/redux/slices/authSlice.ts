@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IUserWithTokens } from '../../models/IUserWithTokens.ts';
+import { IUserWithTokens } from '../../models/IUserModel/IUserWithTokens.ts';
 
 type AuthSliceType = {
     user: IUserWithTokens | null;

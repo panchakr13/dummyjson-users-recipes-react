@@ -2,11 +2,11 @@ import {createBrowserRouter, RouteObject} from "react-router-dom";
 import {MainLayout} from "../components/layouts/MainLayout.tsx";
 import HomePage from "../pages/HomePage.tsx";
 import {LoginPage} from "../pages/LoginPage.tsx";
-import {UsersPage} from "../pages/UsersPage.tsx";
-import {UserDetailsPage} from "../pages/UserDetailsPage.tsx";
-import {RecipesPage} from "../pages/RecipesPage.tsx";
-import {RecipeDetailsPage} from "../pages/RecipeDetailsPage.tsx";
-import {RecipesByTagPage} from "../pages/RecipesByTagPage.tsx";
+import {UsersPage} from "../pages/userPages/UsersPage.tsx";
+import {UserDetailsPage} from "../pages/userPages/UserDetailsPage.tsx";
+import {RecipesPage} from "../pages/recipePages/RecipesPage.tsx";
+import {RecipeDetailsPage} from "../pages/recipePages/RecipeDetailsPage.tsx";
+import {RecipesByTagPage} from "../pages/recipePages/RecipesByTagPage.tsx";
 
 const routes: RouteObject[] = [
     {
