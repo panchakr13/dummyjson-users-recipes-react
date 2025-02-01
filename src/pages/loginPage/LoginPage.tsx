@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../redux/hooks/useAppDispatch.tsx';
-import { authSliceActions } from '../redux/slices/authSlice.ts';
-import { login } from '../services/authUser.api.service.ts';
+import { useAppDispatch } from '../../redux/hooks/useAppDispatch.tsx';
+import { authSliceActions } from '../../redux/slices/authSlice.ts';
+import { login } from '../../services/authUser.api.service.ts';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'
 
 export const LoginPage = () => {
     const [username, setUsername] = useState('');

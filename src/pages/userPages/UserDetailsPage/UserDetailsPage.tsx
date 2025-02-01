@@ -1,5 +1,6 @@
 import {Link } from "react-router-dom";
-import useUserDetailsData from "../../hooks/userHooks/useUserDetailsData.tsx";
+import useUserDetailsData from "../../../hooks/userHooks/useUserDetailsData.tsx";
+import './UserDetailsPage.css'
 
 
 export const UserDetailsPage = () => {

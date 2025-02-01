@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import SearchBar from "../../components/SearchBar.tsx";
-import useRecipeByTagData from "../../hooks/recipeHooks/useRecipeByTagData.tsx";
+import SearchBar from "../../../components/searchBar/SearchBar.tsx";
+import useRecipeByTagData from "../../../hooks/recipeHooks/useRecipeByTagData.tsx";
+import './RecipesByTagPage.css'
 
 export const RecipesByTagPage = () => {
 

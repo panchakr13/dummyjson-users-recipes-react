@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { PaginationComponent } from "../../components/pagination/PaginationComponent.tsx";
-import SearchBar from "../../components/SearchBar.tsx";
-import useRecipeData from "../../hooks/recipeHooks/useRecipeData.tsx";
+import { PaginationComponent } from "../../../components/pagination/PaginationComponent.tsx";
+import SearchBar from "../../../components/searchBar/SearchBar.tsx";
+import useRecipeData from "../../../hooks/recipeHooks/useRecipeData.tsx";
+import './RecipesPage.css'
 
 export const RecipesPage = () => {
 

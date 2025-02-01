@@ -1,8 +1,9 @@
-
 import { Link } from "react-router-dom";
-import { PaginationComponent } from "../../components/pagination/PaginationComponent.tsx";
-import SearchBar from "../../components/SearchBar.tsx";
-import useUserData from "../../hooks/userHooks/useUserData.tsx";
+import { PaginationComponent } from "../../../components/pagination/PaginationComponent.tsx";
+import SearchBar from "../../../components/searchBar/SearchBar.tsx";
+import useUserData from "../../../hooks/userHooks/useUserData.tsx";
+import './UsersPage.css'
+
 
 export const UsersPage = () => {
 

@@ -1,5 +1,6 @@
 import {FC, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import './SearchBar.css'
 
 interface SearchBarProps {
     placeholder?: string;

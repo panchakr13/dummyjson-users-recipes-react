@@ -1,5 +1,5 @@
-
-import { useAppSelector } from '../redux/hooks/useAppSelector.tsx';
+import { useAppSelector } from '../../redux/hooks/useAppSelector.tsx';
+import './HomePage.css';
 
 const HomePage = () => {
     const { isAuthenticated } = useAppSelector((state) => state.authSlice);

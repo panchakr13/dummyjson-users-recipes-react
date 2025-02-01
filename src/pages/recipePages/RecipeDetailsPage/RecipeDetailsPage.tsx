@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import useRecipeDetailsData from "../../hooks/recipeHooks/useRecipeDetailsData.tsx";
+import useRecipeDetailsData from "../../../hooks/recipeHooks/useRecipeDetailsData.tsx";
+import './RecipeDetailsPage.css'
 
 export const RecipeDetailsPage = () => {
 

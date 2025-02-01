@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { useAppSelector } from "../redux/hooks/useAppSelector.tsx";
+import { useAppSelector } from "../../redux/hooks/useAppSelector.tsx";
+import './Menu.css'
 
 const Menu = () => {
     const location = useLocation();
