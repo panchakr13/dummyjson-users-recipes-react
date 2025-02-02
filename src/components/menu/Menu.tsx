@@ -13,9 +13,9 @@ const Menu = () => {
             </div>
             <div className="welcome-promt">Welcome to Menu!</div>
             <div className='box-for-nav-links'></div>
-            <div className="nav-links">
-                <Link to="/users" className="nav-links">Users Page</Link>
-                <Link to="/recipes" className="nav-links">Recipes Page</Link>
+            <div className="nav-links-menu">
+                <Link to="/users" className="nav-links-menu">Users Page</Link>
+                <Link to="/recipes" className="nav-links-menu">Recipes Page</Link>
             </div>
         </div>
     );

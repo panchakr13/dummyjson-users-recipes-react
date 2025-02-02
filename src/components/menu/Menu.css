@@ -33,32 +33,28 @@
 }
 
 .welcome-promt {
-    font-size: 2.5rem;
-    color: #fff;
-    background: linear-gradient(135deg, #162e57, #236fc6);
+    font-size: 3rem;
+    color: darkgreen;
     padding: 15px 30px;
     border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
-.nav-links {
+.nav-links-menu {
     display: flex;
     gap: 20px;
     font-size: 1.2rem;
-    color: #fff;
-    background: linear-gradient(45deg, #162e57, #236fc6);
     padding: 10px 18px;
-    border-radius: 8px;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
 }
-.nav-links a{
-    background: linear-gradient(45deg, #134fcc, #172765);
+.nav-links-menu a{
+    background: linear-gradient(45deg, #6b92e3, #3b5de1);
 }
 
-.nav-links:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.nav-links-menu a:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
 }
 
 

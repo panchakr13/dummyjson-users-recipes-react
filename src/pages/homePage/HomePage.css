@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+    background: whitesmoke;
     font-family: Arial, sans-serif;
     padding: 20px;
     text-align: center;
@@ -20,13 +20,13 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.1);
     font-size: 2.5vw;
-    color: #006400;
+    color: #255a27;
     animation: fadeInUp 1s ease-out;
 }
 
 .login-link {
     padding: 10px 20px;
-    background: linear-gradient(45deg, #4caf50, #81c784);
+    background: linear-gradient(45deg, #8faeea, #284581);
     color: #fff;
     text-decoration: none;
     border-radius: 6px;

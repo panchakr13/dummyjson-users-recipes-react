@@ -14,8 +14,8 @@ export const RecipesByTagPage = () => {
                     <Link to="/recipes" className="nav-links-by-tag">Recipes Page</Link>
                 </nav>
             </div>
+                <SearchBar placeholder="Search recipes..." searchRoute="/recipes"/>
             <h2 className="tag-title">Recipes with tag: <span className="tag-highlight">#{tag}</span></h2>
-            <SearchBar placeholder="Search recipes..." searchRoute="/recipes" />
             {!loadState ? (
                 <div className="loading">Loading...</div>
             ) : (
@@ -23,7 +23,7 @@ export const RecipesByTagPage = () => {
                     {recipes.map((recipe) => (
                         <div key={recipe.id} className="recipe-card-by-tag">
                             <Link to={`/recipes/${recipe.id}`} className="recipe-name-by-tag">
-                                {recipe.name}
+                                {recipe.name} <img src={recipe.image} alt={recipe.name}/>
                             </Link>
                         </div>
                     ))}
