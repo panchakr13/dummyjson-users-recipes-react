@@ -24,12 +24,12 @@ export const UserDetailsPage = () => {
                 )}
 
                 <h3>{user.firstName} {user.lastName}</h3>
+                <p><strong>ID: </strong>{user.id}</p>
                 <p><strong>Email:</strong> {user.email}</p>
                 <p><strong>Phone:</strong> {user.phone}</p>
                 <p><strong>BirthDate:</strong> {user.birthDate}</p>
                 <p><strong>Country:</strong> {user.address.country}</p>
                 <p><strong>City:</strong> {user.address.city}</p>
-                <p><strong>Crypto:</strong> {user.crypto.coin}</p>
             </div>
 
             <div className="recipe-list-by-details-page">

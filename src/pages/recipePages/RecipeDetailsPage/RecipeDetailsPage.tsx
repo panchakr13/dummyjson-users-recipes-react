@@ -11,6 +11,7 @@ export const RecipeDetailsPage = () => {
 
     return (
         <div className="recipe-details-container">
+            <Link to={`/users/${recipe.userId}`} className='nav-links-to-user-details'>View user, who cooked this</Link>
             <div className="navigation-links-recipe-details">
                 <Link to="/users" className="nav-links-recipe-details">Users Page</Link>
                 <Link to="/recipes" className="nav-links-recipe-details">Recipes Page</Link>
@@ -38,6 +39,7 @@ export const RecipeDetailsPage = () => {
                             {Array.isArray(recipe.instructions)
                                 ? recipe.instructions.map((step, index) => <li key={index}>{step}</li>)
                                 : <li>{recipe.instructions}</li>}
+
                         </ol>
                     </div>
                 </div>
