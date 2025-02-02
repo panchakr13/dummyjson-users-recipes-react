@@ -12,7 +12,6 @@ This project is a web application built with **React** and **Redux** that utiliz
 - [Installation](#installation)
 - [Usage](#usage)
     - [Home Page](#home-page)
-    - [Login Page](#login-page)
     - [Users Page](#users-page)
     - [Recipes Page](#recipes-page)
     - [Recipe Details Page](#recipe-details)
