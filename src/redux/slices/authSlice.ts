@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IUserWithTokens } from '../../models/IUserModel/IUserWithTokens.ts';
+import {AuthSliceType} from "./sliceTypes/AuthSliceType.ts";
 
-type AuthSliceType = {
-    user: IUserWithTokens | null;
-    isAuthenticated: boolean;
-};
 
 const initialState: AuthSliceType = {
     user: null,

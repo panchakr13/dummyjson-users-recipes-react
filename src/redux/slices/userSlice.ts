@@ -1,12 +1,8 @@
 import { IUser } from "../../models/IUserModel/IUser.ts";
 import { createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction } from "@reduxjs/toolkit";
 import { loadAuthUsers, getUserById, searchUsers } from "../../services/user.api.service.ts";
+import {UserSliceType} from "./sliceTypes/UserSliceType.ts";
 
-type UserSliceType = {
-    users: IUser[];
-    user: IUser | null,
-    loadState: boolean;
-}
 
 const initialState: UserSliceType = { users: [], user: null, loadState: false };
 

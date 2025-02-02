@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {useAppSelector} from "../../redux/hooks/useAppSelector.tsx";
+import {useAppSelector} from "../../redux/reduxHooks/useAppSelector.tsx";
 
 
 const useRecipeDetailsData = () => {

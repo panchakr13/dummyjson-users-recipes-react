@@ -2,39 +2,51 @@ import { Link } from "react-router-dom";
 import { PaginationComponent } from "../../../components/pagination/PaginationComponent.tsx";
 import SearchBar from "../../../components/searchBar/SearchBar.tsx";
 import useRecipeData from "../../../hooks/recipeHooks/useRecipeData.tsx";
-import './RecipesPage.css'
+import './RecipesPage.css';
 
 export const RecipesPage = () => {
-
-    const { recipes, loadState } = useRecipeData()
+    const { recipes, loadState } = useRecipeData();
 
     return (
-        <div>
-            <SearchBar placeholder="Search recipes..." searchRoute="/recipes" />
+        <div className="recipes-page-container">
+            <div className="recipes-page-header">
+                <nav className="nav-links-container">
+                    <Link to="/users" className="nav-links-users-by-recipes-page">Users Page</Link>
+                </nav>
+                <h1 className="page-title">Recipes</h1>
 
-            {!loadState && <div>Loading</div>}
-
-            {recipes.map((recipe) => (
-                <div key={recipe.id} className="div-for-recipes">
-                    <Link to={`/recipes/${recipe.id}`}>
-                        <p className="recipe-name">{recipe.name}</p>
-                    </Link>
-                    <p className="recipe-tags">
-                        {recipe.tags.map(tag => (
-                            <Link
-                                key={tag}
-                                to={`/recipes/tag/${encodeURIComponent(tag)}`}
-                                style={{ marginRight: "8px", textDecoration: "underline" }}
-                            >
-                                {tag}
+                <SearchBar placeholder="Search recipes..." searchRoute="/recipes" />
+            </div>
+            {!loadState ? (
+                <div className="loading">Loading...</div>
+            ) : (
+                <div className="recipes-list">
+                    {recipes.map((recipe) => (
+                        <div key={recipe.id} className="recipe-card">
+                            <Link to={`/recipes/${recipe.id}`} className="recipe-card-link">
+                                {recipe.image && (
+                                    <img src={recipe.image} alt={recipe.name} className="recipe-image" />
+                                )}
+                                <div className="recipe-info">
+                                    <span className="recipe-name">{recipe.name}</span>
+                                </div>
                             </Link>
-                        ))}
-                    </p>
+                            <div className="recipe-tags">
+                                {recipe.tags.map(tag => (
+                                    <Link
+                                        key={tag}
+                                        to={`/recipes/tag/${tag}`}
+                                        className="tag-link"
+                                    >
+                                        #{tag}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
+            )}
             <PaginationComponent />
         </div>
     );
 };
-
-//

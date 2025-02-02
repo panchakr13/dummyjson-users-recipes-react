@@ -1,36 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
-import { useAppSelector } from "../../redux/hooks/useAppSelector.tsx";
-import './Menu.css'
+import { Link } from "react-router-dom";
+import { useAppSelector } from "../../redux/reduxHooks/useAppSelector";
+import "./Menu.css";
 
 const Menu = () => {
-    const location = useLocation();
     const { isAuthenticated, user } = useAppSelector((state) => state.authSlice);
-
+    if (!isAuthenticated) return null;
     return (
-        <ul>
-            {location.pathname !== "/" && <li><Link to="/">Back to homepage</Link></li>}
-
-            {isAuthenticated ? (
-                <>
-                    <li>
-                        <div>
-                            {user && (
-                                <span>
-                  Welcome, {user.firstName}
-                                    {user.image && <img src={user.image} alt="User Avatar" width={30} height={30} />}
-                </span>
-                            )}
-                        </div>
-                    </li>
-                    {location.pathname !== "/users" && <li><Link to="/users">Users Page</Link></li>}
-                    {location.pathname !== "/recipes" && <li><Link to="/recipes">Recipes Page</Link></li>}
-                </>
-            ) : (
-                <>
-                    {location.pathname !== "/login" && <li><Link to="/login">Login Page</Link></li>}
-                </>
-            )}
-        </ul>
+        <div className="menu-container">
+            <div className="header-box">
+                {user?.image && <img src={user.image} alt={user.lastName} className="user-logo" />}
+                <span className="username-span">{user?.firstName} {user?.lastName}</span>
+            </div>
+            <div className="welcome-promt">Welcome to Menu!</div>
+            <div className='box-for-nav-links'></div>
+            <div className="nav-links">
+                <Link to="/users" className="nav-links">Users Page</Link>
+                <Link to="/recipes" className="nav-links">Recipes Page</Link>
+            </div>
+        </div>
     );
 };
 

@@ -1,18 +1,18 @@
-import {FC, useState} from "react";
+import { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './SearchBar.css'
+import "./SearchBar.css";
 
 interface SearchBarProps {
     placeholder?: string;
     searchRoute: string;
 }
 
-const SearchBar:FC<SearchBarProps> = ({ placeholder = "Search...", searchRoute }) => {
+const SearchBar: FC<SearchBarProps> = ({ placeholder = "Search...", searchRoute }) => {
     const [searchText, setSearchText] = useState("");
     const navigate = useNavigate();
 
     const handleSearch = () => {
-        navigate(`${searchRoute}?q=${encodeURIComponent(searchText)}&skip=0`);
+        navigate(`${searchRoute}?q=${searchText}&skip=0`);
     };
 
     return (
@@ -29,3 +29,4 @@ const SearchBar:FC<SearchBarProps> = ({ placeholder = "Search...", searchRoute }
 };
 
 export default SearchBar;
+

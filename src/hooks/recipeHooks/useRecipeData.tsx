@@ -1,5 +1,5 @@
-import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
-import {useAppSelector} from "../../redux/hooks/useAppSelector.tsx";
+import {useAppDispatch} from "../../redux/reduxHooks/useAppDispatch.tsx";
+import {useAppSelector} from "../../redux/reduxHooks/useAppSelector.tsx";
 import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {recipeSliceActions} from "../../redux/slices/recipeSlice.ts";

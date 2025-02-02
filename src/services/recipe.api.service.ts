@@ -18,6 +18,6 @@ export const searchRecipes = async (query: string): Promise<IRecipe[]> => {
 }
 
 export const searchRecipesByTag = async (tag: string): Promise<IRecipe[]> => {
-    const { data } = await axiosInstance.get<IRecipesResponseModelType>(`/recipes/search?q=${encodeURIComponent(tag)}`);
+    const { data } = await axiosInstance.get<IRecipesResponseModelType>(`/recipes/search?q=${tag}`);
     return data.recipes.filter(recipe => recipe.tags.includes(tag));
 }

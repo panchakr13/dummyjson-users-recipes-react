@@ -1,12 +1,8 @@
 import { createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction } from "@reduxjs/toolkit";
 import { IRecipe } from "../../models/IRecipeModel/IRecipe.ts";
 import { loadAuthRecipes, getRecipesByUserId, searchRecipes, searchRecipesByTag } from "../../services/recipe.api.service.ts";
+import {RecipeSliceType} from "./sliceTypes/RecipeSliceType.ts";
 
-type RecipeSliceType = {
-    recipes: IRecipe[];
-    recipe: IRecipe | null;
-    loadState: boolean;
-}
 
 const initialState: RecipeSliceType = { recipes: [], recipe: null, loadState: false };
 
