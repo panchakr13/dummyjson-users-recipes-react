@@ -51,9 +51,9 @@
 
 .recipes-list {
     display: flex;
-    flex-wrap: wrap; /* Дозволяє карткам переноситись на новий ряд */
-    gap: 1.5rem; /* Відстань між картками */
-    justify-content: space-between; /* Вирівнює картки по рядку */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .recipe-card {
@@ -66,8 +66,8 @@
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Картки займають всю доступну ширину, залежно від екрану */
-    max-width: 280px; /* Максимальна ширина картки */
+    width: 100%;
+    max-width: 280px;
 }
 
 .recipe-card:hover {
