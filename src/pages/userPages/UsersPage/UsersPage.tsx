@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { PaginationComponent } from "../../../components/pagination/PaginationComponent";
 import SearchBar from "../../../components/searchBar/SearchBar";
-import useUserData from "../../../hooks/userHooks/useUserData";
+import useUsersData from "../../../hooks/userHooks/useUsersData.tsx";
 import "./UsersPage.css";
 
 export const UsersPage = () => {
-    const { users, loadState } = useUserData();
+    const { users, loadState } = useUsersData();
 
     return (
         <div className="users-page-container">

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { PaginationComponent } from "../../../components/pagination/PaginationComponent.tsx";
 import SearchBar from "../../../components/searchBar/SearchBar.tsx";
-import useRecipeData from "../../../hooks/recipeHooks/useRecipeData.tsx";
+import useRecipesData from "../../../hooks/recipeHooks/useRecipesData.tsx";
 import './RecipesPage.css';
 
 export const RecipesPage = () => {
-    const { recipes, loadState } = useRecipeData();
+    const { recipes, loadState } = useRecipesData();
 
     return (
         <div className="recipes-page-container">

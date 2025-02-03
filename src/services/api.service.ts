@@ -10,6 +10,6 @@ export type loginData = {
     username: string;
     password: string;
     expiresInMins: number;
-}
+};
 
 

@@ -4,7 +4,7 @@ import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {userSliceActions} from "../../redux/slices/userSlice.ts";
 
-const useUserData = () => {
+const useUsersData = () => {
 
     const dispatch = useAppDispatch();
     const { users, loadState } = useAppSelector(({ userSlice }) => userSlice);
@@ -25,4 +25,4 @@ const useUserData = () => {
     return { users, loadState }
 };
 
-export default useUserData;
+export default useUsersData;

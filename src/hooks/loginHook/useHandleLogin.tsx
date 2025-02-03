@@ -26,7 +26,7 @@ const useHandleLogin = () => {
         } catch (error) {
             console.error('Auth was failed', error);
 
-            setErrorMessage('Please, write correct username or password');
+            setErrorMessage('Please, write correct username and password');
         }
     };
     return {username, setUsername, password, setPassword, handleLogin, errorMessage}

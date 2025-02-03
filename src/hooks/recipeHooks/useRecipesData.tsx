@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import {recipeSliceActions} from "../../redux/slices/recipeSlice.ts";
 
 
-const useRecipeData = () => {
+const useRecipesData = () => {
 
     const dispatch = useAppDispatch();
     const { recipes, loadState } = useAppSelector(({ recipeSlice }) => recipeSlice);
@@ -26,4 +26,4 @@ const useRecipeData = () => {
     return { recipes, loadState };
 };
 
-export default useRecipeData;
+export default useRecipesData;

@@ -45,7 +45,7 @@ export const UserDetailsPage = () => {
                         ))}
                     </ul>
                 ) : (
-                    <p>No recipes found for this user.</p>
+                    <p>Recipes not found for this user.</p>
                 )}
             </div>
         </div>
