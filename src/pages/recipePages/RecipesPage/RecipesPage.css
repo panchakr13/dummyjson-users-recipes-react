@@ -1,9 +1,12 @@
 .recipes-page-container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 2rem;
     font-family: Arial, sans-serif;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recipes-page-header {
@@ -12,17 +15,22 @@
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .page-title {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
+    text-align: center;
 }
 
 .nav-links-container {
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2%;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .nav-links-users-by-recipes-page {
@@ -32,6 +40,9 @@
     color: #fff;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
 }
 
 .nav-links-users-by-recipes-page:hover {
@@ -39,21 +50,14 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.nav-links-users-by-recipes-page.active {
-    background: linear-gradient(135deg, #81c784, #4caf50);
-}
-
-.loading {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #4caf50;
-}
-
 .recipes-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .recipe-card {
@@ -68,6 +72,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 280px;
+    margin: 0 auto;
 }
 
 .recipe-card:hover {
@@ -84,7 +89,8 @@
 
 .recipe-image {
     width: 100%;
-    height: 200px;
+    height: auto;
+    max-height: 200px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 1rem;
@@ -102,12 +108,7 @@
     gap: 0.5rem;
     font-size: 1.2rem;
     color: #333;
-}
-
-.recipe-name {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
+    text-align: center;
 }
 
 .recipe-tags {
@@ -115,6 +116,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
 .tag-link {
@@ -137,4 +139,5 @@
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    width: 100%;
 }
