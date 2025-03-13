@@ -6,7 +6,7 @@ This project is a web application built with **React** and **Redux** that utiliz
 the [DummyJSON API](https://dummyjson.com/docs) to display and manage data about users and recipes. The application
 features a dynamic interface, user authentication, paginated lists, and search functionality.
 
-Take the username and password from the DummyJSON API, for example: </br>
+Take the username and password from the DummyJSON API, for example: </br> </br>
 **username: emilys </br> password: emilyspass**
 
 ## Table of Contents
