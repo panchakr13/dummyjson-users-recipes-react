@@ -7,7 +7,7 @@ the [DummyJSON API](https://dummyjson.com/docs) to display and manage data about
 features a dynamic interface, user authentication, paginated lists, and search functionality.
 
 Take the username and password from the DummyJSON API, for example: </br>
-**username: emilys, password: emilyspass**
+**username: emilys </br> password: emilyspass**
 
 ## Table of Contents
 
